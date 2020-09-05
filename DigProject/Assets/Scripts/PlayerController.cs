@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Rigidbody2D rigidBody;
+
     public float moveSpeed = 5f;
     // Start is called before the first frame update
     void Start()
@@ -16,5 +18,11 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         transform.position += movement * Time.deltaTime * moveSpeed;
+
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            if (this.rigidBody != null)
+                this.rigidBody.velocity += new Vector2(0f, 10f);
+        }
     }
 }
