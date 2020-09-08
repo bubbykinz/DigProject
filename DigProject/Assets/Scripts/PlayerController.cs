@@ -24,23 +24,26 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         transform.position += movement * Time.deltaTime * moveSpeed;
+        Vector3 rotation = this.transform.localRotation.eulerAngles;
+        this.transform.rotation = Quaternion.Euler(rotation.x, (rotation.y + 180), rotation.z);
+     
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (this.rigidBody != null)
                 this.rigidBody.velocity += new Vector2(0f, jumpSpeed);
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (this.shovel != null)
-            {
-                Collider[] array = Physics.OverlapBox(this.shovel.transform.localPosition, new Vector3(colW, colH, 0f));
-                foreach ( Collider in array) ;
-            }
+       // if (Input.GetKeyDown(KeyCode.E))
+       // {
+       //     if (this.shovel != null)
+       //     {
+        //        Collider[] array = Physics.OverlapBox(this.shovel.transform.localPosition, new Vector3(colW, colH, 0f));
+        //        foreach ( Collider in array) ;
+       //     }
 
 
 
-            object GetComponent(SandPhysics.GameOb
-        }
+        //    object GetComponent(SandPhysics.GameOb
+       // }                                            
     }
 }

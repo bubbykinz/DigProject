@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7832281328338259661}
   - component: {fileID: 2263465427568429124}
   - component: {fileID: 79179419740736267}
-  - component: {fileID: 6806668777466464414}
+  - component: {fileID: 232091286263224327}
   m_Layer: 0
   m_Name: Sand
   m_TagString: Untagged
@@ -122,7 +122,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6806668777466464414
+--- !u!114 &232091286263224327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,3 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03853da57ab2dc4ebfcb7f8d2c585c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  appliedVelocity: 0
+  rigidBody2D: {fileID: 79179419740736267}
+  shovel: {fileID: 0}
