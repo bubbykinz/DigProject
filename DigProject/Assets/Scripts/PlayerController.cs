@@ -15,7 +15,9 @@ public class PlayerController : MonoBehaviour
     public float stimer = 0f;
 
     public float moveSpeed = 5f;
-    public float jumpSpeed = 5f;
+    public float jumpSpeed = 20f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,4 +62,6 @@ public class PlayerController : MonoBehaviour
             stimer = shoveltime;
         }
     }
+
+
 }

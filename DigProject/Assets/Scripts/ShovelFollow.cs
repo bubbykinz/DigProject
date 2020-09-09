@@ -5,10 +5,13 @@ using UnityEngine;
 public class ShovelFollow : MonoBehaviour
 {
     public GameObject objectToFollow;
+
+   //public SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -16,4 +19,5 @@ public class ShovelFollow : MonoBehaviour
     {
         transform.position = objectToFollow.transform.position;
     }
+
 }

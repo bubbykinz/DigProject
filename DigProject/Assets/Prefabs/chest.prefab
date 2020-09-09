@@ -148,6 +148,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   newSprite: {fileID: 21300000, guid: 392e9457140264f2cbed568955a0691c, type: 3}
   chestSound: {fileID: 8300000, guid: 565e5ee08a464453699e4ffc126e424a, type: 3}
+  playerController: {fileID: 243709134557962634}
 --- !u!82 &-7929381224640982900
 AudioSource:
   m_ObjectHideFlags: 0

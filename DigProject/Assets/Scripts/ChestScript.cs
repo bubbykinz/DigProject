@@ -18,6 +18,7 @@ public class ChestScript : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         alreadyHit = false;
+
     }
 
     // Update is called once per frame
