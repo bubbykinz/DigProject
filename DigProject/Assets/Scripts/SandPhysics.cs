@@ -16,33 +16,30 @@ public class SandPhysics : MonoBehaviour
 
     public void ApplyVelocity()
     {
-        gameObject.layer = LayerMask.NameToLayer("FreeFly");
         rigidBody2D.constraints = RigidbodyConstraints2D.None;
-        this.rigidBody2D.velocity = new Vector2(10, 10);
+        this.rigidBody2D.velocity = new Vector2(3, 3);
         this.appliedVelocity = true;
-        
     }
     public void ApplyDefault()
     {
         rigidBody2D.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         this.rigidBody2D.velocity = Vector2.zero;
         this.appliedVelocity = false;
-        gameObject.layer = LayerMask.NameToLayer("Dirt");
     }
 
-        //Update is called once per frame
+        // Update is called once per frame
         void Update()
         {
-            if (rigidBody2D.velocity == new Vector2(1, 1))
+            if (rigidBody2D.velocity == new Vector2(0, 0))
             {
-           ApplyDefault();
+            ApplyDefault();
             }
         }
-        void OnCollisionEnter2D(Collision2D collision)
+        void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.name == "Shovel")
-            {   
-            ApplyVelocity();
+            if (collision.gameObject.tag == "Shovel")
+            {
+                ApplyVelocity();
             }
                 
         }
