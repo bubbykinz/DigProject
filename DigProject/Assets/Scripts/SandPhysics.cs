@@ -18,7 +18,7 @@ public class SandPhysics : MonoBehaviour
     {
         gameObject.layer = LayerMask.NameToLayer("FreeFly");
         rigidBody2D.constraints = RigidbodyConstraints2D.None;
-        this.rigidBody2D.velocity = new Vector2(10, 10);
+        this.rigidBody2D.velocity = new Vector2(10, 20);
         this.appliedVelocity = true;
         
     }

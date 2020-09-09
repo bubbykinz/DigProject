@@ -3344,7 +3344,8 @@ GameObject:
   - component: {fileID: 679712876}
   - component: {fileID: 679712875}
   - component: {fileID: 679712877}
-  m_Layer: 0
+  - component: {fileID: 679712878}
+  m_Layer: 9
   m_Name: Shovel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3358,12 +3359,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679712873}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.32, y: -1.57, z: 0}
-  m_LocalScale: {x: 0.84356374, y: 0.32954392, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.043981, y: 2.0601625, z: 0}
+  m_LocalScale: {x: 0.16657054, y: 0.15334088, z: 0.3810899}
   m_Children: []
-  m_Father: {fileID: 951902860}
-  m_RootOrder: 0
+  m_Father: {fileID: 1849679094}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &679712875
 MonoBehaviour:
@@ -3493,7 +3494,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.00000011920929}
@@ -3509,6 +3510,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &679712878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679712873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942d04103103ac942bfbd5d3685a0d1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToFollow: {fileID: 936664093}
 --- !u!4 &686516963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 301148714103310222, guid: 6af7cadc72d57ba4aa0c5dd86e801873, type: 3}
@@ -3650,7 +3664,7 @@ GameObject:
   - component: {fileID: 731906537}
   - component: {fileID: 731906536}
   - component: {fileID: 731906535}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundBorder3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4918,6 +4932,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 301148714103310222, guid: 6af7cadc72d57ba4aa0c5dd86e801873, type: 3}
   m_PrefabInstance: {fileID: 1910241894}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &936664093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936664094}
+  m_Layer: 10
+  m_Name: ShovelFollow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &936664094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936664093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.37, y: -1.563, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 951902860}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &943482932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 301148714103310222, guid: 6af7cadc72d57ba4aa0c5dd86e801873, type: 3}
@@ -4999,7 +5043,7 @@ GameObject:
   - component: {fileID: 951902857}
   - component: {fileID: 951902856}
   - component: {fileID: 951902861}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5182,7 +5226,7 @@ Transform:
   m_LocalPosition: {x: 3.077806, y: -7.849, z: 0}
   m_LocalScale: {x: 0.19746053, y: 0.46531242, z: 0.3810899}
   m_Children:
-  - {fileID: 679712874}
+  - {fileID: 936664094}
   m_Father: {fileID: 1572070578}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5199,6 +5243,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 951902856}
+  shovel: {fileID: 679712873}
+  colW: 0
+  colH: 0
+  shoveltime: 1
+  stimer: 0
   moveSpeed: 5
   jumpSpeed: 5
 --- !u!4 &956688420 stripped
@@ -8143,6 +8192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sand (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4333614138817916595, guid: 6af7cadc72d57ba4aa0c5dd86e801873, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6af7cadc72d57ba4aa0c5dd86e801873, type: 3}
 --- !u!4 &1409908165 stripped
@@ -8758,7 +8811,7 @@ GameObject:
   - component: {fileID: 1568588446}
   - component: {fileID: 1568588445}
   - component: {fileID: 1568588444}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundBorder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9822,7 +9875,7 @@ GameObject:
   - component: {fileID: 1700753150}
   - component: {fileID: 1700753149}
   - component: {fileID: 1700753148}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundBorder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10423,7 +10476,7 @@ GameObject:
   - component: {fileID: 1794425770}
   - component: {fileID: 1794425769}
   - component: {fileID: 1794425768}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundBorder4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10872,6 +10925,7 @@ Transform:
   - {fileID: 1568588443}
   - {fileID: 731906534}
   - {fileID: 1794425767}
+  - {fileID: 679712874}
   m_Father: {fileID: 1572070578}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
